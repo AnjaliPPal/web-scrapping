@@ -16,7 +16,7 @@ app.post('/scrape', async (req, res) => {
     await page.goto(amazonURL, { waitUntil: 'domcontentloaded' });
  
 
-    const html = await page.content(); // Get the HTML content of the page
+    const html = await page.content();
 
     const $ = cheerio.load(html); // Load the HTML into Cheerio for easy manipulation
 
